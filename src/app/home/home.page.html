@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Sleep Tracker
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="homeTitle">
+      Track Your Sleep Journey
+  </div>
+
+    <div class="dateTimeCard">
+      <ion-card class="dateTime">
+        <ion-card-header>
+            <ion-card-subtitle id="currentDate">{{currentDateTime | date: 'MMM d, YYYY'}}</ion-card-subtitle>
+            <ion-card-title id="currentTime">{{currentDateTime | date: 'h:mm a'}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+
+    <h2>Alarms</h2>
+    <div class="alarmCards">
+      <ion-card (click) = "openBedtimeAlarm()" class="alarmCard">
+        <img id="alarmIcons" src="assets/icon/bedtime.png" alt="circular green to orange color gradient">
+        <ion-card-title id="cardTitle">Bedtime</ion-card-title>
+      </ion-card>
+
+      <ion-card (click) = "openWakeupAlarm()" class="alarmCard">
+        <img id="alarmIcons" src="assets/icon/wakeup.png" alt="circular blue to yellowcolor gradient">
+        <ion-card-title id="cardTitle">Wakeup</ion-card-title>
+      </ion-card>
+    </div>
+
+    <h2>My Journey</h2>
+        <ion-card class="cardFeatures" (click)="openSleepLogger()">
+          <div class="logSleep">
+            <img class= "cardBackgroundPage" id="logSleepIcon" src="assets/icon/log-sleep-icon.jpg" alt="rectangular blue to green gradient"/>
+            <div class="card-title" id="cardTitle">Log Sleep</div>
+            <div class="card-subtitle" id="cardSubtitle">Enter sleep data</div>
+          </div>
+        </ion-card>
+
+        <ion-card class="cardFeatures" (click)="openSleepinessLogger()">
+            <img class= "card-background-page" id="logSleepinessIcon" src="assets/icon/log-sleepiness-icon.jpg" alt=""/>
+            <div class="card-title" id="cardTitle">Log Sleepiness</div>
+            <div class="card-subtitle" id="cardSubtitle">Enter sleepiness data</div>
+        </ion-card>
+
+    <h2>My Journey Analysis</h2>
+    <div class="myJourneyAnalysisCards">
+      <ion-card class="cardFeatures" (click)="openSleepJourney()">
+        <img class= "card-background-page" id="viewSleepDataIcon" src="assets/icon/view-sleep-data-icon.jpg" alt="rectangular blue to green gradient"/>
+        <ion-card-title class="card-title" id="cardTitle">View<br/>Sleep Journey</ion-card-title>
+    </ion-card>
+
+      <ion-card class="cardFeatures" (click)="openSleepinessJourney()">
+          <img class= "card-background-page" id="viewSleepinessDataIcon" src="assets/icon/view-sleepiness-data-icon.jpg" alt="rectangular blue to green gradient"/>
+          <ion-card-title class="card-title" id="cardTitle">View<br/>Sleepiness Journey</ion-card-title>
+      </ion-card>
+
+    </div>
+    <h2>My Journey Report</h2>
+    <ion-card class="cardFeatures" (click)="openJourneyReport()">
+      <img class= "card-background-page" id="viewSAllDataIcon" src="assets/icon/view-all-data-icon.jpg" alt="rectangular blue to green gradient"/>
+      <ion-card-title class="card-title" id="cardTitle">View<br/>Entire Journey</ion-card-title>
+    </ion-card>
+  <br />
+  </div>
+</ion-content>

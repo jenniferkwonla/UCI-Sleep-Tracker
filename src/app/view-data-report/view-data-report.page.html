@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sleep Tracker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="title">
+      Sleep and Sleepiness Report
+    </div>
+    <br/>
+    <div class="subtitle">
+      <h3>Date<br/></h3>
+      <h4>Value</h4>
+    </div>
+
+    <ion-list>
+      <ion-item *ngFor = 'let d of allData'>
+        <ion-label>
+        <h4>{{d.getLoggedAtInStr()}}</h4>
+        <p>{{d.summaryString()}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

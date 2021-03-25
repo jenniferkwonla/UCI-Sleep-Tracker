@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="logBackground">
+      <div class="title">Sleepiness Data</div>
+      <div class="description">
+        A place that lets you track your sleepiness. After gathering data, an accurate sleep report is generated to help you improve your sleep pattern.
+      </div>
+      <div class="subtitle">Log Date and Value</div>
+        <div class="toolbarBackground">
+          <ion-label class="dateTimeLabel">Date</ion-label>
+          <ion-datetime display-format="MMM, D YYYY hh:mm A"
+                        picker-format="MM/DD/YY HH:mm Z"
+                        display-timezone='utc'
+                        name="sleepinessDate"
+                        (ionChange) = "dateChanged(this)"
+                        [(ngModel)] = "defaultDate"
+                        (ngModelChange) = "defaultDate"
+                        value = "{{defaultDate}}"
+                        placeholder="{{defaultDate | date: 'MMM d, YYYY hh:mm a'}}"></ion-datetime>
+          <br/>
+          <div class="valueLabel">Value</div>
+          <ion-select class="valueOptions"
+                      placeholder="Select Value"
+                      (ionChange)="valueChanged(this)"
+                      [(ngModel)] = "defaultValue"
+                      (ngModelChange) = "defaultValue">
+            <ion-select-option *ngFor = 'let d of scaleDefined'>
+              {{d}}
+            </ion-select-option>
+          </ion-select>
+          <br/>
+          <ion-button fill='clear'  id="logButton" (click)="addSleepinessData()">DONE</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

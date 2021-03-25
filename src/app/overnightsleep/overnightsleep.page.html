@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center" id="title">Sleep Data</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="logBackground">
+      <div class="title">Sleep Data</div>
+      <div class="description">
+        A place that lets you track your sleep. After gathering data, an accurate sleep report is generated to help you improve your sleep pattern.
+      </div>
+      <div class="subtitle">Log Sleep Time</div>
+      <div class="toolbarBackground">
+        <div class = "dateTimeLabel">Bedtime</div>
+        <ion-datetime display-format="MMM, D YYYY hh:mm A"
+                      picker-format="MMM, DD YY HH:mm A"
+                      (ionChange)="dateChangedSleepStart(this)"
+                      [(ngModel)] = "yesterdayDate"
+                      (ngModelChange) = "yesterdayDate"
+                      value = "startSleep"
+                      placeholder="{{yesterdayDate | date: 'MMM d, YYYY hh:mm a'}}"></ion-datetime>
+      <br/>
+        <div class = "dateTimeLabel">Wakeup</div>
+      <ion-datetime display-format="MMM, D YYYY hh:mm A"
+                    picker-format="MM/DD/YY HH-mm-A"
+                    (ionChange) = "dateChangedSleepEnd(this)"
+                    [(ngModel)] = "todayDate"
+                    (ngModelChange) = "todayDate"
+                    value = "endSleep"
+                    placeholder="{{todayDate | date: 'MMM d, YYYY hh:mm a'}}"></ion-datetime>
+      <br/>
+        <ion-button fill='clear' id="logButton" (click)="addOvernightSleepData()">DONE</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

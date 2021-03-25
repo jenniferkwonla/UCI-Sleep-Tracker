@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.jennifer",
+  "appName": "sleeptracker",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

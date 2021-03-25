@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Alarm</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class = "alarmBackground">
+      <div class="title">Bedtime</div>
+      <div class="description">
+        Bedtime alarm helps create a pattern to get a a refreshed and good night's sleep
+        Set a bedtime alarm to remind yourself to get some rest and start setting a sleeping habit.
+      </div>
+      <div class="subtitle">Schedule</div>
+        <ion-label>Select to pick time</ion-label>
+        <ion-datetime id="alarm"
+                    display-format="hh:mm A"
+                    picker-format="HH:mm a"
+                    name="bedtimeAlarm"
+                    (ionChange)="timeChanged(this)"
+                    [(ngModel)] = "bedTime"
+                    (ngModelChange)="bedTime"
+                    value = {{defaultTime}}
+                      display-timezone = "utc-8"
+                    placeholder="{{defaultTime | date: 'hh:mm a'}}"></ion-datetime>
+
+      <div class="subtitle">Repeat</div>
+
+      <ion-item>
+        <ion-label>Once</ion-label>
+        <ion-toggle slot="end" name="once" color="success" [(ngModel)]="once" checked></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Everyday</ion-label>
+        <ion-toggle slot="end" name="everyday" color="success" [(ngModel)]="everyday" checked></ion-toggle>
+      </ion-item>
+
+      <div id="setAlarmButton">
+        <ion-button fill = 'clear' (click) = "addBedtimeAlarm(this)">Set Alarm</ion-button>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

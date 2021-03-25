@@ -1,0 +1,83 @@
+ion-datetime{
+  text-align: center;
+  display:block;
+  --placeholder-color: #6d444d;
+}
+
+ion-select{
+  width: 50%
+}
+ion-toolbar{
+  --min-height: 50px!important;
+}
+
+.description{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top: 10px;
+  font-family: Avenir;
+  font-size: 1em;
+  text-align:center;
+}
+
+.dateTimeLabel{
+  padding-top: 10px;
+  font-family: Avenir;
+  font-size: 1em;
+  display: block;
+  text-align: center;
+}
+
+.valueLabel{
+  padding-top: 10px;
+  font-family: Avenir;
+  font-size: 1em;
+  display: block;
+  text-align: center;
+}
+
+.valueOptions{
+  margin: auto;
+}
+
+.subtitle{
+  padding-top: 10px;
+  font-family: Avenir;
+  font-size: 1em;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.title{
+  padding-top: 20px;
+  margin-top: 10px;
+  font-family: Avenir;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  text-align:center;
+}
+
+#logButton{
+  --background: #f7b296;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  color: black;
+}
+
+.logBackground{
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  background-image: linear-gradient(80deg, rgb(237, 105, 155), rgb(254, 179, 147));
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+#container{
+  position: relative;
+}
+
+

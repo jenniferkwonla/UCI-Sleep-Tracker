@@ -1,0 +1,75 @@
+ion-content{
+  font-family: Avenir;
+}
+
+ion-item{
+  font-family: Avenir;
+  font-size: 1em;
+  --background: transparent;
+  --ion-color-base: transparent !important;
+  --height: 3px;
+}
+
+#repeatLabels{
+  font-family: Avenir;
+  font-size: 1em;
+}
+
+ion-label{
+  font-family: Avenir;
+  font-size: 0.8em;
+  margin-left: 15px;
+}
+
+#alarm{
+  font-size: 2em;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display:block;
+  text-align:center;
+}
+
+.title{
+  padding-top: 20px;
+  margin-top:10px;
+  margin-left: 15px;
+  font-family: Avenir;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.subtitle{
+  padding: 0px;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-family: Avenir;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.description{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+  font-family: Avenir;
+  font-size: 1em;
+}
+
+ion-button{
+  --background: #fcf1ce;
+  margin: 20px auto;
+  display: block;
+  text-align:center;
+  color: black;
+}
+
+#container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  background-image: linear-gradient(60deg, rgb(255, 215, 108), rgb(255, 255, 255));
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
